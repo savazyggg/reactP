@@ -26,7 +26,7 @@ function App() {
     return data;
   };
 
-  //fetch task
+  //fetch task // 어떠한 아이디만 뽑아내서 그 아이디를 가진 {}가져옴
   const fetchTask = async (id) => {
     const res = await fetch(`http://localhost:5000/tasks/${id}`);
     const data = await res.json();
@@ -42,12 +42,14 @@ function App() {
         "Content-type": "application/json",
       },
       body: JSON.stringify(task),
-    });
+    }); // task를 변수로 받아서 tasks에 정보 기입
+
     // const id = Math.floor(Math.random() * 1000) + 1;
     // const newTask = { id, ...task };
     // setTasks([...tasks, newTask]);
-    const data = await res.json();
-    setTasks([...tasks, data]);
+
+    const data = await res.json(); //기입된 정보까지 자바스크립트{}로 data변수에 넣어줌
+    setTasks([...tasks, data]); // 이전 기입됐던 정보들은 ...tasks로 되고,  이전 정보 + 새롭게 추가된 것이 data
   };
 
   //delete Task
@@ -56,13 +58,13 @@ function App() {
       method: "DELETE",
     });
 
-    setTasks(tasks.filter((task) => task.id !== id));
+    setTasks(tasks.filter((task) => task.id !== id)); //받은 id와 일치하지 않는 id를 가진 정보로만 재배열(클릭한 id가 배열에서 삭제됨)
   };
 
   //Toggle Reminder
   const toggleReminder = async (id) => {
-    const taskToToggle = await fetchTask(id);
-    const updTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
+    const taskToToggle = await fetchTask(id); //id대로 뽑아서 전달
+    const updTask = { ...taskToToggle, reminder: !taskToToggle.reminder }; //{.. reminder}안에 나머지들을 ..., reminder만 뽑아서 수정
 
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "PUT",
