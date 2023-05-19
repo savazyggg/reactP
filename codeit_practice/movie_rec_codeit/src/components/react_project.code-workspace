@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../../../.."
+	},
+	{
+		"path": "../../../../../../../Downloads/interactive-comments-section-main"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "interactive-comments-section-main"
+  }
+}
