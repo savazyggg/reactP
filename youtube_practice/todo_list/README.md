@@ -1,16 +1,29 @@
-# Getting Started with Create React App
+# 오늘의 할일은?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📌 Summary
+계획을 디테일하게 짜기보다는 대략적으로 무엇을 해야할지 쭉 나열하고 우선순위를 정해서 일처리하는 편을 좋아합니다. 
+이에 따라 세부적인 기능보다는 기본 기능에 충실하며 json server를 이용하여 리액트와 비동기가 어떻게 상호작용하는지에 대해 배울 수 있는 기회가 되었으면 하였습니다. 
 
-## Available Scripts
+* 주요 기능
+ - 투두리스트 추가하기/삭제하기
+ - 투두리스트 하이라이트 표기하기
+ - 라우팅을 이용하여 페이지 이동하기
 
-In the project directory, you can run:
 
-### 'npm run server'
+🔍 Meaning
+API와 비동기가 아직은 어렵게 느껴지나, 이번 프로젝트를 통해서 조금은 가까워진 기분입니다. 데이터 포멧을 자유롭게 바꿀 수 있어서 open API 대비 조금 더 자유롭고, 직관적으로 학습할 수 있었습니다.
+해당 서비스를 이용하기 위해 json server readme를 읽으며 rest API 의 이해도 또한 높일 수 있었습니다.
+또한 add task, task, tasks, button 으로 작은 단위로 컴포넌트를 분리해보며 컴포넌트에 대한 이해도를 높일 수 있었습니다. 
+컴포넌트가 아직은 어렵게 생각되어, 일단 코드를 다 짜보고 고민하면서 정리해보니 css div랑 비슷한거 같다고 생각이 들며 그때부터는 조금더 쉽게 접근할 수 있었습니다.
+자르면서 prop으로 넘겨지는 부분들, 그리고 prop이 두 번 이상 내려지는 과정 또는 함수로 내려져서 값이 바뀌는 것 등을 진행하며 컴포지션의 과정에 대해 이해도가 높아졌습니다.
 
-db.json을 실행시켜주세요
-[http://localhost:5000]으로 열립니다.
 
-### `npm start`
+⚙️ Environment Setup
+# Install JavaScript Packages
+npm install
 
-app을 실행시켜주세요.\
+# Run Backend Server
+npm run server
+
+# Run Frontend Server
+npm run start
