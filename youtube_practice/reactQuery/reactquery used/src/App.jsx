@@ -31,12 +31,12 @@ function App() {
     },
   });
 
-  if (postQuery.isLoading) return <h1>Loading...</h1>;
-  if (postQuery.isError) return <pre>{JSON.stringify(postQuery.error)}</pre>;
+  if (postsQuery.isLoading) return <h1>Loading...</h1>;
+  if (postsQuery.isError) return <pre>{JSON.stringify(postsQuery.error)}</pre>;
 
   return (
     <div>
-      {postQuery.data.map((post) => (
+      {postsQuery.data.map((post) => (
         <div key={post.id}>{post.title}</div>
       ))}
       <button
