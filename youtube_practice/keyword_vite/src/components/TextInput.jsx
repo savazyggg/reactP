@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { Textarea, Button, useToast } from "@chakra-ui/react";
 

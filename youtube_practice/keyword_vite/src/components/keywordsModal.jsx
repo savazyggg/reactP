@@ -11,6 +11,7 @@ import {
   CircularProgress,
 } from "@chakra-ui/react";
 
+/** 키워드모달 */
 const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
   return (
     <>
